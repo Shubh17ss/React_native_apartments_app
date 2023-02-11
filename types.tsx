@@ -15,8 +15,12 @@ declare global {
 
 export type RootStackParamList = {
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
-  Modal: undefined;
-  NotFound: undefined;
+  FindLocations:undefined;
+  SignIn: undefined;
+  SignUp: undefined;
+  ForgotPassword: undefined;
+  ResetPassword:{token:string};
+ 
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
@@ -25,11 +29,19 @@ export type RootStackScreenProps<Screen extends keyof RootStackParamList> = Nati
 >;
 
 export type RootTabParamList = {
-  TabOne: undefined;
-  TabTwo: undefined;
+  Search: undefined |  SearchScreenParams;
+  Saved: undefined;
+  Account:undefined
 };
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
   BottomTabScreenProps<RootTabParamList, Screen>,
   NativeStackScreenProps<RootStackParamList>
 >;
+
+export type SearchScreenParams={
+  location:string,
+  boundingBox: string[],
+  lat:string,
+  lon:string,
+}

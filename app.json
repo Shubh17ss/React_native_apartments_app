@@ -1,10 +1,11 @@
 {
   "expo": {
-    "name": "estate",
-    "slug": "estate",
+    "name": "Apartio",
+    "slug": "Apartio",
+    "description":"This is just the front-end part along with map view of the Apartments app .",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/apartio_icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
